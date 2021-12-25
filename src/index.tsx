@@ -5,7 +5,18 @@ import './index.scss'
 const App = () => {
     return(
         <React.Fragment>
-            <div className='react-scss'>TypeScript React Template</div>
+            <div id='structure'>
+                <div id='opacity'></div>
+                <div id='content'>
+                    <div id='template'>TypeScript React Template</div>
+                    <h4 id='description'>Directory Static: Contains the static markup you are using</h4>
+                    <h4 id='description'>Directory Style: Contains the styles you use</h4>
+                    <h4 id='description'>Directory Script: Contains the scripts you are using.</h4>
+                    <h4 id='description'>Directory Font: Contains the fonts you use.</h4>
+                    <h4 id='description'>Directory Image: Contains the images you are using.</h4>
+                </div>
+
+            </div>
         </React.Fragment>
     )
 }
