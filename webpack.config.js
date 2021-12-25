@@ -20,12 +20,12 @@ module.exports = (env = {}) => {
                 title: "Webpack World",
                 buildTime: new Date().toString(),
                 template: "public/index.html",
-                filename: "asset/static/[name].html",
+                filename: "static/main.html",
             })
         ];
         if (isProd) {
             plugins.push(new MiniCssExtractPlugin({
-                filename: isProd ? 'asset/style/[name]-[hash:8].css' : undefined
+                filename: isProd ? 'style/main.css' : undefined
             }));
         };
 
@@ -60,7 +60,7 @@ module.exports = (env = {}) => {
                     test: /\.(png|jpg|jpeg|svg|gif|ico)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'asset/image/[name]-[hash:7][ext][query]'
+                        filename: 'image/[name]-[hash:7][ext][query]'
                     }
                 },
                 {
@@ -68,7 +68,7 @@ module.exports = (env = {}) => {
                     test: /\.(ttf|otf|eot|woff|woff2)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'asset/font/[name]-[hash:7][ext][query]'
+                        filename: 'font/[name][ext][query]'
                     }
                 }
             ],
@@ -77,8 +77,8 @@ module.exports = (env = {}) => {
             extensions: ['.tsx', '.ts', '.js'],
         },
         output: {
-            filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist'),
+            filename: 'script/main.js'
         },
         plugins: getPlugins()
         //plugins: [new BundleAnalyzerPlugin()]
