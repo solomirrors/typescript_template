@@ -1,0 +1,13 @@
+@font-face {
+   font-family: myFirstFont;
+   src: url("pushster.ttf");
+}
+
+body{
+   background-image: url("background.jpg");
+}
+
+.react-scss{
+   font-family: myFirstFont;
+   font-size: 72px;
+}
