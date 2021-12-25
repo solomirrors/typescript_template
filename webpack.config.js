@@ -20,7 +20,7 @@ module.exports = (env = {}) => {
                 title: "Webpack World",
                 buildTime: new Date().toString(),
                 template: "public/index.html",
-                filename: "static/main.html",
+                filename: "index.html",
             })
         ];
         if (isProd) {
@@ -40,9 +40,9 @@ module.exports = (env = {}) => {
             rules: [
                 {
                     //Loading TypeScript
-                    test: /\.tsx?$/,
+                    test: /\.(ts|tsx)?$/,
                     exclude: /node_modules/,
-                    use: 'ts-loader',
+                    use: ['ts-loader'],
                 },
                 {
                     //Loading CSS
